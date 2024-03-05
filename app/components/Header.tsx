@@ -5,7 +5,7 @@ import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   return (
-    <nav className="bg-background text-foreground sticky top-2 z-30 rounded-lg shadow-lg shadow-slate-300 px-1 py-2 mt-2 max-w-[500px]">
+    <nav className="bg-background text-foreground sticky top-2 z-30 mx-auto rounded-lg shadow-lg shadow-slate-300 px-1 py-2 mt-2 max-w-[500px]">
       <ul className="flex items-center justify-between">
         <ModeToggle />
         <NavLink
@@ -14,7 +14,7 @@ export default function Header() {
             isActive ? "bg-foreground text-background rounded-lg" : ""
           }
         >
-          <li className="px-2 py-1 ">About</li>
+          <li className="px-2 py-1 text-sm">About</li>
         </NavLink>
         <NavLink
           to={"/"}
@@ -22,7 +22,7 @@ export default function Header() {
             isActive ? "bg-foreground text-background rounded-lg" : ""
           }
         >
-          <li className="px-2 py-1 rounded-lg">ED</li>
+          <li className="px-2 py-1 rounded-lg text-lg">ED</li>
         </NavLink>
         <NavLink
           to={"/shop"}
@@ -30,7 +30,7 @@ export default function Header() {
             isActive ? "bg-foreground text-background rounded-lg" : ""
           }
         >
-          <li className="px-2 py-1 rounded-lg">Shop</li>
+          <li className="px-2 py-1 rounded-lg text-sm">Shop</li>
         </NavLink>
         <li className="px-2 py-1">
           <User size={16} />

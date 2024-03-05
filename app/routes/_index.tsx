@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import Header from "~/components/Header";
+import { Masonry } from "~/components/Masonry";
 import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
@@ -11,10 +12,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div
-      style={{ fontFamily: "system-ui, sans-serif" }}
-      className="relative min-h-screen h-screen px-8"
-    >
+    <div className="relative min-h-screen h-screen px-8">
       <Header />
       <div className="relative h-[calc(100%-72px)] max-w-lg mb-8 mx-auto lg:flex">
         <img
@@ -28,7 +26,7 @@ export default function Index() {
       </div>
 
       <section>
-        <h2 className="text-xl font-bold">Some of my shots</h2>
+        <Masonry />
       </section>
     </div>
   );

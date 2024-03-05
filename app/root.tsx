@@ -1,5 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import AntonFont from "@fontsource/anton/index.css";
 import {
   Links,
   LiveReload,
@@ -20,6 +21,7 @@ import clsx from "clsx";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: AntonFont },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
@@ -42,7 +44,7 @@ export function App() {
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
       </head>
-      <body>
+      <body className="font-primary">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
