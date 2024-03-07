@@ -1,21 +1,35 @@
-import { Image } from "./Image";
-
+import { motion, useInView, useAnimation, Variants } from "framer-motion";
+import { useEffect, useRef } from "react";
 export const Masonry = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const controls = useAnimation();
+  useEffect(() => {
+    controls.start("show");
+    console.log(isInView);
+  }, [isInView]);
+  const animateVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      x: -200,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
   return (
-    // <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
-    //   <Image src="/photos/image1.jpg" alt="image1" />
-    //   <Image src="/photos/image2.jpg" alt="image2" />
-    //   <Image src="/photos/image3.jpg" alt="image1" />
-    //   <Image src="/photos/image4.jpg" alt="image1" />
-    //   <Image src="/photos/image5.jpg" alt="image1" />
-    //   <Image src="/photos/image6.jpg" alt="image1" />
-    //   <Image src="/photos/image7.jpg" alt="image1" />
-    //   <Image src="/photos/image8.jpg" alt="image1" />
-    //   <Image src="/photos/image9.jpg" alt="image1" />
-    // </div>
-
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div className="grid gap-4">
+      <motion.div
+        className="grid gap-4"
+        variants={animateVariants}
+        initial="hidden"
+        animate="show"
+        ref={ref}
+      >
         <div className="relative">
           <img
             className="h-auto max-w-full rounded-lg"
@@ -33,12 +47,23 @@ export const Masonry = () => {
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="/photos/image3.jpg"
+            src="/photos/image19.jpg"
             alt=""
           />
         </div>
-      </div>
-      <div className="grid gap-4">
+      </motion.div>
+      <motion.div
+        className="grid gap-4"
+        initial={{
+          opacity: 0,
+          x: -20,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, delay: 0.3 },
+        }}
+      >
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
@@ -68,8 +93,19 @@ export const Masonry = () => {
             alt=""
           />
         </div>
-      </div>
-      <div className="grid gap-4">
+      </motion.div>
+      <motion.div
+        className="grid gap-4"
+        initial={{
+          opacity: 0,
+          x: -20,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, delay: 0.5 },
+        }}
+      >
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
@@ -91,30 +127,41 @@ export const Masonry = () => {
             alt=""
           />
         </div>
-      </div>
-      <div className="grid gap-4">
+      </motion.div>
+      <motion.div
+        className="grid gap-4"
+        initial={{
+          opacity: 0,
+          x: -20,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, delay: 0.6 },
+        }}
+      >
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="/photos/image1.jpg"
+            src="/photos/monkeys.jpg"
             alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="/photos/image1.jpg"
+            src="/photos/image20.jpg"
             alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="/photos/image1.jpg"
+            src="/photos/image3.jpg"
             alt=""
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
