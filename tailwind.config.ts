@@ -55,6 +55,31 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        pastelOrange: {
+          DEFAULT: "#e29578",
+        },
+        pastelBeige: {
+          DEFAULT: "#ffddd2",
+        },
+        pastelWhite: {
+          DEFAULT: "#edf6f9",
+        },
+        pastelTeal: {
+          DEFAULT: "#83c5be",
+        },
+        pastelGreen: {
+          DEFAULT: "#006d77",
+        },
+        mainOrange: {
+          DEFAULT: "#FD9B65",
+        },
+        bgBeige: {
+          DEFAULT: "#faedcd",
+        },
+        peach: "#f5e9e2",
+        darkGray: "#bdbbb0",
+        brown: "#917c78",
+        someGreen: "#7a918d",
       },
       borderRadius: {
         lg: "var(--radius)",

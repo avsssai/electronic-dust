@@ -1,16 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
-import Header from "~/components/Header";
-import { Masonry } from "~/components/Masonry";
-import { easeInOut, motion } from "framer-motion";
-import {
-  Image10,
-  Image12,
-  Image13,
-  Image14,
-  Image15,
-  Image16,
-  Image18,
-} from "~/components/Section";
+import { Copyright } from "lucide-react";
+import { Slideshow } from "~/components/Slideshow";
+import { imageData, imageData2 } from "~/components/imageData";
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,59 +12,95 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="relative min-h-screen h-screen px-8">
-      <Header />
-      {/* <div className="relative h-[calc(100%-72px)] max-w-lg mb-8 mx-auto lg:flex">
-        <img
-          src="/cameraGifMobile.gif"
-          alt="camera gif"
-          className="absolute w-full h-[calc(100%-72px)] top-10 rounded-xl"
-        />
-        <div className="absolute text-5xl text-stone-300 font-extrabold top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center ">
-          Electronic <br /> Dust
+    <div>
+      <section className="bg-mainOrange h-screen relative isolate flex items-center">
+        <div className="w-full aspect-video relative flex items-center justify-center max-h-screen">
+          <img
+            src="/cameraGif.gif"
+            alt="Camera gif"
+            className="absolute top-0 left-0 inset-0 h-full w-full"
+          />
+          <h1 className="text-[10vw] text-center z-30 absolute text-gray-300">
+            Electronic Dust
+          </h1>
         </div>
-      </div> */}
-      <div className="relative my-12 mx-auto flex flex-col gap-4 ">
-        <div className="relative">
-          <div className="absolute top-10 left-10 hidden lg:block">
-            <motion.h1
-              className="text-xl md:text-2xl text-black"
-              initial={{ y: 100, opacity: 0.1 }}
-              animate={{
-                y: 0,
-                opacity: 1,
-                transition: { ease: easeInOut, duration: 1 },
-              }}
-            >
-              Electronic <br />
-              Dust
-            </motion.h1>
-            <motion.p
-              className="text-slate-700"
-              initial={{ y: 100, opacity: 0 }}
-              animate={{
-                y: 0,
-                opacity: 1,
-                transition: { ease: easeInOut, duration: 1, delay: 0.5 },
-              }}
-            >
-              A documentation of reel photography.
-            </motion.p>
-          </div>
-          <img src="/photos/image11.jpeg" alt="dog" className="rounded-lg" />
-        </div>
-        <Image12 />
-        <Image13 />
-        <Image14 />
-        <Image15 />
-        <Image16 />
-        <Image10 />
-        <Image18 />
-      </div>
-
-      <section className="mt-16">
-        <Masonry />
       </section>
+      <section className="flex flex-col md:flex-row md:h-screen ">
+        <div className="flex-1 bg-peach">
+          <div className="h-full px-8 py-16 md:px-16  flex items-center">
+            <div className="bg-white">
+              <img
+                src="/photos/image11.jpeg"
+                alt=""
+                className="w-full p-4 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 bg-white flex h-screen">
+          <img
+            src="/photos/image5.jpg"
+            alt="girl watching the ocean"
+            className="w-full object-contain py-20 px-4"
+          />
+        </div>
+      </section>
+      <section className="flex flex-col md:flex-row md:h-screen">
+        <div className="flex-1 bg-pastelWhite ">
+          <div className="h-full px-8 py-16 md:px-16  flex items-center">
+            <div className="bg-white">
+              <img
+                src="/photos/image13.jpeg"
+                alt=""
+                className="w-full p-4 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 bg-bgBeige flex ">
+          <img
+            src="/photos/image10.jpg"
+            alt="girl watching the ocean"
+            className="w-full object-contain py-20 px-4"
+          />
+        </div>
+      </section>
+      <section className="flex h-screen bg-brown justify-center items-center py-10 px-10">
+        <div className="flex relative overflow-hidden justify-center items-center h-full w-full">
+          <Slideshow imageData={imageData} />
+        </div>
+      </section>
+      <section className="flex flex-col md:flex-row md:h-screen">
+        <div className="flex-1 bg-pastelWhite ">
+          <div className="h-full px-8 py-16 md:px-16  flex items-center">
+            <div className="bg-white">
+              <img
+                src="/photos/image2.jpg"
+                alt="black and white wall"
+                className="w-full p-4 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 bg-black flex ">
+          <img
+            src="/photos/image15.jpg"
+            alt="In the clouds"
+            className="w-full object-contain py-20 px-4"
+          />
+        </div>
+      </section>
+      <section className="flex h-screen bg-peach justify-center items-center py-10 px-10">
+        <div className="flex relative overflow-hidden justify-center items-center h-full w-full">
+          <Slideshow imageData={imageData2} />
+        </div>
+      </section>
+      <footer className="bg-black text-white px-15 py-10 items-center flex flex-col justify-center">
+        <h1 className="flex gap-2 text-2xl items-center">
+          <Copyright /> Electronic Dust
+        </h1>
+        <h2>{new Date().getFullYear()}</h2>
+      </footer>
     </div>
   );
 }
