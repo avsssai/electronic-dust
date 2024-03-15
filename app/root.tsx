@@ -1,6 +1,8 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 import AntonFont from "@fontsource/anton/index.css";
+import BungeeShade from "@fontsource/bungee-shade/index.css";
+import Caveat from "@fontsource-variable/caveat/index.css";
 import {
   Links,
   LiveReload,
@@ -22,6 +24,8 @@ import clsx from "clsx";
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
   { rel: "stylesheet", href: AntonFont },
+  { rel: "stylesheet", href: Caveat },
+  { rel: "stylesheet", href: BungeeShade },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 

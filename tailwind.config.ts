@@ -20,6 +20,8 @@ const config = {
     extend: {
       fontFamily: {
         primary: "'Anton',sans-serif",
+        display: "'Bungee Shade', system-ui;",
+        label: "'Caveat Variable', cursive;",
       },
       colors: {
         border: "hsl(var(--border))",

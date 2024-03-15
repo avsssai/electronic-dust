@@ -615,10 +615,20 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.1.tgz#16308cea045f0fc777b6ff20a9f25474dd8293d2"
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
 
+"@fontsource-variable/caveat@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/caveat/-/caveat-5.0.17.tgz#8d5c9283fe388318a2ee762557f37bf1be1c7384"
+  integrity sha512-u563+9E9+xpgr7TboIb8y9XVm4F1rwWBSXfva7VJAuYTV4zgZ443jzR9eKcS6UiA4idqe2tZBXrK7ygSjZp3vw==
+
 "@fontsource/anton@^5.0.19":
   version "5.0.19"
   resolved "https://registry.yarnpkg.com/@fontsource/anton/-/anton-5.0.19.tgz#99860133eee7d00ac2ea28baa52cff76a8c89375"
   integrity sha512-ecUp96pfLBofdMF0YqBrTPtPEiSyycUiGkERJyj55J7c7fU0qAHXBhgjjt3FGD1xW7Iiu4YkcDJD1sQIJ3hyhA==
+
+"@fontsource/bungee-shade@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/bungee-shade/-/bungee-shade-5.0.19.tgz#0a7cb4a048b6d9f892e90a1d8914e70e2113edd8"
+  integrity sha512-4J5886vssv1DCsvEhFokW4E1BzEeF2RrfzQSMmwn+/w2wUvRGpyQl1t2FI9a/KvzF6QbFOwD9ZxoHHJGSaoNJg==
 
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
