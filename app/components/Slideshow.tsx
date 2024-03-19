@@ -1,7 +1,7 @@
 import { AnimatePresence, Variants, motion, spring } from "framer-motion";
 import React from "react";
 import { wrap } from "@popmotion/popcorn";
-import { imageData } from "./imageData";
+import { Flowers } from "./imageData";
 import { ArrowLeftCircleIcon, ArrowRightCircle } from "lucide-react";
 
 const variants: Variants = {
@@ -41,7 +41,7 @@ export const Slideshow = ({ imageData }: { imageData: string[] }) => {
     <>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
-          className="absolute h-full w-full object-contain aspect-auto"
+          className="absolute h-full w-full object-contain aspect-auto p-4"
           key={page}
           src={imageData[imageIndex]}
           custom={direction}
@@ -67,18 +67,18 @@ export const Slideshow = ({ imageData }: { imageData: string[] }) => {
         />
       </AnimatePresence>
       <div
-        className="absolute top-[50% - 20px] right-1 z-10 w-5 h-5 bg-white rounded-full text-2xl flex items-center justify-center leading-4"
+        className="hidden md:block absolute top-[50% - 20px] right-1 z-10 w-5 h-5 bg-white rounded-full text-2xl flex items-center justify-center leading-4"
         onClick={() => paginate(1)}
       >
         <ArrowRightCircle />
       </div>
       <div
-        className="absolute top-[calc(50% - 20px)] left-1 z-10 w-5 h-5 bg-white rounded-full text-2xl flex items-center justify-center leading-4"
+        className="hidden md:block absolute top-[calc(50% - 20px)] left-1 z-10 w-5 h-5 bg-white rounded-full text-2xl flex items-center justify-center leading-4"
         onClick={() => paginate(-1)}
       >
         <ArrowLeftCircleIcon />
       </div>
-      <div className="text-2xl z-10 text-white text-end mt-auto">
+      <div className="text-xl z-10 text-white text-end mt-auto font-label">
         {imageIndex + 1}/{imageData.length}
       </div>
     </>

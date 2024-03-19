@@ -82,6 +82,9 @@ const config = {
         darkGray: "#bdbbb0",
         brown: "#917c78",
         someGreen: "#7a918d",
+        pear: "#e9edc9",
+        lightBrown: "#faedcd",
+        landscape: "#22362D",
       },
       borderRadius: {
         lg: "var(--radius)",
