@@ -124,7 +124,7 @@ export default function Index() {
             initial="initial"
             whileInView="animate"
             variants={FadeUpVariants}
-            viewport={{ margin: "-300px", once: true }}
+            viewport={{ margin: "-100px", once: true }}
           >
             <img
               src="/photos/image13.jpeg"
