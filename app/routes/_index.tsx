@@ -50,14 +50,14 @@ export default function Index() {
             initial="initial"
             whileInView="animate"
             variants={FadeUpVariants}
-            viewport={{ margin: "-300px", once: true }}
+            viewport={{ margin: "-100px", once: true }}
           >
             <img
               src="/photos/image12.jpeg"
               alt="windowsXP"
               className="object-contain max-h-[calc(100vh-72px)]"
             />
-            <p className="text-center font-label mt-4 text-lg">
+            <p className="text-center text-foreground font-label mt-4 text-lg">
               The Indian Windows XP
             </p>
           </motion.div>
@@ -68,14 +68,14 @@ export default function Index() {
             initial="initial"
             whileInView="animate"
             variants={FadeUpVariants}
-            viewport={{ margin: "-300px", once: true }}
+            viewport={{ margin: "-100px", once: true }}
           >
             <img
               src="/photos/image5.jpg"
               alt="image1"
               className="object-contain max-h-[calc(100vh-72px)]"
             />
-            <p className="text-center font-label  mt-4 text-lg">
+            <p className="text-center text-foreground font-label  mt-4 text-lg">
               Transcendence
             </p>
           </motion.div>
@@ -88,14 +88,14 @@ export default function Index() {
             initial="initial"
             whileInView="animate"
             variants={FadeUpVariants}
-            viewport={{ margin: "-300px", once: true }}
+            viewport={{ margin: "-100px", once: true }}
           >
             <img
               src="/photos/image21.jpg"
               alt="image1"
               className="object-contain max-h-[calc(100vh-72px)]"
             />
-            {/* <p className="text-center font-label  mt-4 text-lg">
+            {/* <p className="text-center text-foreground font-label  mt-4 text-lg">
               Transcendence
             </p> */}
           </motion.div>
@@ -108,14 +108,16 @@ export default function Index() {
             initial="initial"
             whileInView="animate"
             variants={FadeUpVariants}
-            viewport={{ margin: "-300px", once: true }}
+            viewport={{ margin: "-100px", once: true }}
           >
             <img
               src="/photos/image11.jpeg"
               alt="A dog staring at the distance."
               className="object-contain max-h-[calc(100vh-72px)]"
             />
-            <p className="text-center font-label mt-4 text-lg">The dog in us</p>
+            <p className="text-center text-foreground font-label mt-4 text-lg">
+              The dog in us
+            </p>
           </motion.div>
         </div>
         <div className="py-5 px-2 flex flex-col items-center justify-center bg-neutral-200">
@@ -131,7 +133,7 @@ export default function Index() {
               alt="A photo of hyderabad around the durgamcheruvu"
               className="object-contain max-h-[calc(100vh-72px)]"
             />
-            <p className="text-center font-label  mt-4 text-lg">
+            <p className="text-center text-foreground font-label  mt-4 text-lg">
               'Bhagya'nagaram
             </p>
           </motion.div>
@@ -143,7 +145,7 @@ export default function Index() {
           initial="initial"
           whileInView="animate"
           variants={FadeUpVariants}
-          viewport={{ margin: "-300px", once: true }}
+          viewport={{ margin: "-100px", once: true }}
         >
           <Slideshow imageData={Flowers} />
         </motion.div>
@@ -155,14 +157,14 @@ export default function Index() {
             initial="initial"
             whileInView="animate"
             variants={FadeUpVariants}
-            viewport={{ margin: "-300px", once: true }}
+            viewport={{ margin: "-100px", once: true }}
           >
             <img
               src="/photos/image10.jpg"
               alt="Church"
               className="object-contain max-h-[calc(100vh-72px)]"
             />
-            <p className="text-center font-label mt-4 text-lg">
+            <p className="text-center text-foreground font-label mt-4 text-lg">
               The Lord's House
             </p>
           </motion.div>
@@ -173,7 +175,7 @@ export default function Index() {
             initial="initial"
             whileInView="animate"
             variants={FadeUpVariants}
-            viewport={{ margin: "-300px", once: true }}
+            viewport={{ margin: "-100px", once: true }}
           >
             <img
               src="/photos/image15.jpg"
@@ -188,7 +190,7 @@ export default function Index() {
           initial="initial"
           whileInView="animate"
           variants={FadeUpVariants}
-          viewport={{ margin: "-300px", once: true }}
+          viewport={{ margin: "-100px", once: true }}
           className="py-5 px-2 flex flex-col items-center bg-landscape justify-center relative overflow-hidden"
         >
           <Slideshow imageData={Landscapes} />
